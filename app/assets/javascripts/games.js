@@ -89,12 +89,12 @@ $( function() {
           })
         }
 
-        // if (promo === "Rook"){
-        // console.log("yahoooo!");
-        // }
-        //   event.preventDefault();
-        //     modal.style.display = "none";
-        //   }, false);
+        if (promo === "Rook"){
+        console.log("yahoooo!");
+        }
+          event.preventDefault();
+            modal.style.display = "none";
+          }, false);
       
       }
     }
