@@ -36,12 +36,15 @@ $( function() {
       var destY = $(this).parent().data('position_y');
 
       var pieceId = ui.draggable.parent().data('piece-id');
+      var type = ui.draggable.parent().data('type');
+      console.log(type);
 
       // var piece = {piece: {position_x: origX, position_y: origY, id: pieceId}};
-      var target = {piece: {position_x : destX, position_y: destY, id: pieceId}};
+      // var target = {piece: {position_x : destX, position_y: destY, id: pieceId, promo: "promo"}};
 
       var modal = document.getElementById('myModal');
       var span = document.getElementsByClassName("close")[0];
+      var promo = "";
 
       if (destY == 4) {
          modal.style.display = "block";
