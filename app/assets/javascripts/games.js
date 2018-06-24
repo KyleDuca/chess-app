@@ -47,23 +47,16 @@ $( function() {
       var promo = "";
 
       if (destY == 4) {
-         modal.style.display = "block";
-
-
-
-         span.onclick = function() {
+        modal.style.display = "block";
+        span.onclick = function() {
           modal.style.display = "none";
-         }
-         window.onclick = function(event) {
+        }
+        window.onclick = function(event) {
           if (event.target == modal) {
-          modal.style.display = "none";
+            modal.style.display = "none";
           }
-         }
-
+        }
       }
-
-
-
     }
   });
 });
