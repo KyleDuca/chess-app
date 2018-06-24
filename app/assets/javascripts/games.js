@@ -86,7 +86,7 @@ $( function() {
         })
         
             // log.innerText = output;
-          //   event.preventDefault();
+            event.preventDefault();
           //   modal.style.display = "none";
           // }, false);
 
