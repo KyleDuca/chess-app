@@ -63,18 +63,7 @@ $( function() {
       }
 
 
-       $.ajax({
-        type: 'PUT',
-        url: '/pieces/update/',
-        headers: {
-        'X-CSRF-Token': $("meta[name='csrf-token']").attr("content")
-          },
-        dataType: 'json',
-        data: target
-      })
 
-      location.reload();
     }
   });
-  // console.log(move_player)
 });
