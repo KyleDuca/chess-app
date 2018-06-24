@@ -58,6 +58,7 @@ $( function() {
         }
 
 
+// errors pop up within these code bits, may be sytax errors
 
         var form = document.querySelector("form");
         var log = document.querySelector("#log");
@@ -87,14 +88,16 @@ $( function() {
             dataType: 'json',
             data: target
           })
-        }
+        }   
 
-        if (promo === "Rook"){
-        console.log("yahoooo!");
-        }
-          event.preventDefault();
-            modal.style.display = "none";
-          }, false);
+
+
+        // if (promo === "Rook"){
+        // console.log("yahoooo!");
+        // }
+        //   event.preventDefault();
+        //     modal.style.display = "none";
+        //   }, false);
       
       }
     }
