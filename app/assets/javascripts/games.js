@@ -10,7 +10,7 @@ $( function() {
       var drag = $( ".draggable" ).children('.white-piece')  
     }
     else {
-     var drag = $( ".draggable" ).children('.black-piece')   
+      var drag = $( ".draggable" ).children('.black-piece')   
     }
     
       drag.draggable({
@@ -92,30 +92,14 @@ $( function() {
 
 
 
-        // if (promo === "Rook"){
-        // console.log("yahoooo!");
-        // }
-        //   event.preventDefault();
-        //     modal.style.display = "none";
-        //   }, false);
+        if (promo === "Rook"){
+          console.log("yahoooo!");
+        }
+          // event.preventDefault();
+          // modal.style.display = "none";
+          // }, false);
       
       }
     }
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-//       }
-//     }
-//   });
-// });
