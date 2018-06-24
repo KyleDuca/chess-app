@@ -66,10 +66,10 @@ $( function() {
         form.addEventListener("submit", function(event) {
           var data = new FormData(form);
           var output = "";
-          for (const entry of data) {
-            // output = entry[0] + "=" + entry[1] + "\r";
-            promo = entry[1];
-          }
+          // for (const entry of data) {
+          //   // output = entry[0] + "=" + entry[1] + "\r";
+          //   promo = entry[1];
+          // }
         });
 
         var target = {piece: {position_x : destX, position_y: destY, id: pieceId, promo: promo, en_passant: enPassant}};
