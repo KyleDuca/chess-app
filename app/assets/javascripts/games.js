@@ -62,32 +62,32 @@ $( function() {
         var form = document.querySelector("form");
         var log = document.querySelector("#log");
 
-        form.addEventListener("submit", function(event) {
-          var data = new FormData(form);
-          var output = "";
-          for (const entry of data) {
-            // output = entry[0] + "=" + entry[1] + "\r";
-            promo = entry[1];
-          };
-          console.log(promo);
+        // form.addEventListener("submit", function(event) {
+        //   var data = new FormData(form);
+        //   var output = "";
+        //   for (const entry of data) {
+        //     // output = entry[0] + "=" + entry[1] + "\r";
+        //     promo = entry[1];
+        //   };
+        //   console.log(promo);
 
 
 
         var target = {piece: {position_x : destX, position_y: destY, id: pieceId, promo: promo}};
 
-        // if (promo === "Queen"){
-        //   console.log("yahoooo!");
+        if (promo === "Queen"){
+          console.log("yahoooo!");
 
-        //   $.ajax({
-        //     type: 'PUT',
-        //     url: '/pieces/update/',
-        //     headers: {
-        //     'X-CSRF-Token': $("meta[name='csrf-token']").attr("content")
-        //       },
-        //     dataType: 'json',
-        //     data: target
-        //   })
-        // }
+          $.ajax({
+            type: 'PUT',
+            url: '/pieces/update/',
+            headers: {
+            'X-CSRF-Token': $("meta[name='csrf-token']").attr("content")
+              },
+            dataType: 'json',
+            data: target
+          })
+        }
 
         // if (promo === "Rook"){
         // console.log("yahoooo!");
