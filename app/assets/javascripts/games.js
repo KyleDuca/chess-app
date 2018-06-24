@@ -36,15 +36,12 @@ $( function() {
       var destY = $(this).parent().data('position_y');
 
       var pieceId = ui.draggable.parent().data('piece-id');
-      var type = ui.draggable.parent().data('type');
-      console.log(type);
 
       // var piece = {piece: {position_x: origX, position_y: origY, id: pieceId}};
-      // var target = {piece: {position_x : destX, position_y: destY, id: pieceId, promo: "promo"}};
+      var target = {piece: {position_x : destX, position_y: destY, id: pieceId}};
 
       var modal = document.getElementById('myModal');
       var span = document.getElementsByClassName("close")[0];
-      var promo = "";
 
       if (destY == 4) {
          modal.style.display = "block";
@@ -60,69 +57,20 @@ $( function() {
           }
          }
 
-
-
-          var form = document.querySelector("form");
-          var log = document.querySelector("#log");
-
-          form.addEventListener("submit", function(event) {
-            var data = new FormData(form);
-            var output = "";
-            for (const entry of data) {
-              // output = entry[0] + "=" + entry[1] + "\r";
-              promo = entry[1];
-            };
-            console.log(promo);
-
-
-
-        var target = {piece: {position_x : destX, position_y: destY, id: pieceId, promo: promo}};
-
-        if (promo === "Queen"){
-          console.log("yahoooo!");
-
-          $.ajax({
-            type: 'PUT',
-            url: '/pieces/update/',
-            headers: {
-            'X-CSRF-Token': $("meta[name='csrf-token']").attr("content")
-              },
-            dataType: 'json',
-            data: target
-          })
-        }
-
-
-
-        if (promo === "Rook"){
-        console.log("yahoooo!");
-
-
-        }
-
-
-            // log.innerText = output;
-            event.preventDefault();
-            modal.style.display = "none";
-          }, false);
-
-
-         
-
       }
-      
-     
-      //  $.ajax({
-      //   type: 'PUT',
-      //   url: '/pieces/update/',
-      //   headers: {
-      //   'X-CSRF-Token': $("meta[name='csrf-token']").attr("content")
-      //     },
-      //   dataType: 'json',
-      //   data: target
-      // })
 
-      // location.reload();
+
+       $.ajax({
+        type: 'PUT',
+        url: '/pieces/update/',
+        headers: {
+        'X-CSRF-Token': $("meta[name='csrf-token']").attr("content")
+          },
+        dataType: 'json',
+        data: target
+      })
+
+      location.reload();
     }
   });
   // console.log(move_player)
