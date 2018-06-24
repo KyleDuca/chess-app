@@ -87,7 +87,7 @@ $( function() {
         
             // log.innerText = output;
             event.preventDefault();
-          //   modal.style.display = "none";
+            modal.style.display = "none";
           // }, false);
 
       }
